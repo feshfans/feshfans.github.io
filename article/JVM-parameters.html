@@ -1,0 +1,304 @@
+<!DOCTYPE html><html lang="en"><head>
+<title> JVM参数---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="()">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+
+</style>
+</head><body>
+<div><div class="preview" id="wmd-preview">
+<style>
+a:focus {
+	outline:	thin dotted #333;
+	outline:	5px auto -webkit-focus-ring-color;
+	outline-offset:	-2px;
+}
+a:hover {
+	outline:	0;
+}
+a:active {
+	outline:	0;
+}
+a:hover {
+	color:	#005580 !important;
+	text-decoration:	underline !important;
+}
+blockquote   small:before {
+	content:	'\2014 \00A0';
+}
+q:before {
+	content:	"";
+}
+q:after {
+	content:	"";
+}
+blockquote:before {
+	content:	"";
+}
+blockquote:after {
+	content:	"";
+}
+.hljs-folder:before {
+	top:	0;
+	content:	'';
+	width:	14px;
+	height:	12px;
+	margin-top:	0px;
+	margin-right:	3px;
+	position:	relative;
+	display:	inline-block;
+	background-size:	14px;
+	background-repeat:	no-repeat;
+}
+.hljs-file:before {
+	top:	0;
+	content:	'';
+	width:	14px;
+	height:	12px;
+	margin-top:	0px;
+	margin-right:	3px;
+	position:	relative;
+	display:	inline-block;
+	background-size:	14px;
+	background-repeat:	no-repeat;
+}
+.hljs-hiddenfile:before {
+	top:	0;
+	content:	'';
+	width:	14px;
+	height:	12px;
+	margin-top:	0px;
+	margin-right:	3px;
+	position:	relative;
+	display:	inline-block;
+	background-size:	14px;
+	background-repeat:	no-repeat;
+}
+.hljs-file:before {
+	height:	14px;
+	margin-left:	1px;
+}
+.hljs-hiddenfile:before {
+	height:	14px;
+	margin-left:	1px;
+}
+.hljs-file.photo:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c5";
+}
+.hljs-file.plain:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f016";
+}
+.hljs-file.source:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c9";
+}
+.hljs-file.archive:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c6";
+}
+.hljs-file.audio:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c7";
+}
+.hljs-file.video:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c8";
+}
+.hljs-file.pdf:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c1";
+}
+.hljs-file.xls:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c3";
+}
+.hljs-file.doc:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c2";
+}
+.hljs-file.ppt:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f1c4";
+}
+.hljs-folder:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f114";
+}
+.hljs-hiddenfile:before {
+	font:	normal normal normal 14px / 1 FontAwesome;
+	content:	"\f016";
+}
+.li_linenum:before {
+	content:	counter(lines , decimal);
+	position:	absolute;
+	left:	0px;
+	text-align:	center;
+	width:	2.5em;
+	opacity:	0.5;
+	vertical-align:	top;
+}
+
+</style><body style="font-family: &apos;Helvetica Neue&apos; , Helvetica , Tahoma , Arial , &apos;Hiragino Sans GB&apos; , STHeiti , &quot;Microsoft YaHei&quot; , &quot;&#x5FAE;&#x8F6F;&#x96C5;&#x9ED1;&quot; , &apos;WenQuanYi Micro Hei&apos; , STXihei , &quot;&#x534E;&#x6587;&#x7EC6;&#x9ED1;&quot; , Heiti , &quot;&#x9ED1;&#x4F53;&quot; , SimSun , &quot;&#x5B8B;&#x4F53;&quot; , Song , sans-serif; font-size: 1.15em; font-weight: 100; color: #2f2f2f;">
+	<div class="preview"><h1 class="story_title" style="margin-top: 0.7em; margin-right: 0; margin-bottom: 0.7em; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.6; color: inherit; text-rendering: optimizelegibility; font-size: 38.5px;">JVM参数</h1><div class="story_tags" style="margin-top: 0; margin-right: 0; margin-bottom: 1.2em; margin-left: 0;"><div class="tag blue label" style="display: inline-block; vertical-align: baseline; line-height: 1; margin-top: 0em; margin-right: 0.125em; margin-bottom: 0em; margin-left: 0.125em; background-color: #e8e8e8; border-color: #e8e8e8; background-image: none; padding-top: 0.6em; padding-right: 0.8em; padding-bottom: 0.6em; padding-left: 0.8em; color: rgba(0 , 0 , 0 , 0.6); text-transform: none; font-weight: bold; border-radius: 0.2857rem; box-sizing: border-box; font-size: 0.7428rem;">JVM</div><div class="tag blue label" style="display: inline-block; vertical-align: baseline; line-height: 1; margin-top: 0em; margin-right: 0.125em; margin-bottom: 0em; margin-left: 0.125em; background-color: #e8e8e8; border-color: #e8e8e8; background-image: none; padding-top: 0.6em; padding-right: 0.8em; padding-bottom: 0.6em; padding-left: 0.8em; color: rgba(0 , 0 , 0 , 0.6); text-transform: none; font-weight: bold; border-radius: 0.2857rem; box-sizing: border-box; font-size: 0.7428rem;">参数</div></div><h3 id="gce79bb8e585b3e79a84e58f82e695b0" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="gce79bb8e585b3e79a84e58f82e695b0" style="color: #0088cc; text-decoration: none;"></a>GC相关的参数</h3>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintGC</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintGCDetails</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintGCTimeStamps<br>
+该参数会在每次发生GC时，额外输出GC发生的时间，该输出时间为虚拟机启动后的时间偏移量。</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PringGCApplicationConcurrentTime<br>
+应用程序的执行时间</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintGCApplicationStoppedTime<br>
+应用程序由于GC而产生的停顿时间</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintReferenceGC<br>
+跟踪系统内的软引用、弱引用、虚引用和Finalize队列</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-Xloggc<br>
+将GC日志以文件的形式输出。如-Xloggc:log/gc.log</p>
+</li>
+</ol>
+<h3 id="e7b1bbe58aa0e8bdbde58db8e8bdbd" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e7b1bbe58aa0e8bdbde58db8e8bdbd" style="color: #0088cc; text-decoration: none;"></a>类加载/卸载</h3>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+TraceClassLoading<br>
+跟踪显式/隐式类的加载</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+TraceClassUnloading<br>
+跟踪显式/隐式类的卸载</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-verbose:class<br>
+跟踪类的加载/卸载，效果等同于1和2的和。但只能跟踪显示类</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintClassHistogram<br>
+在运行时打印、查看系统中类的分布情况。加上此参数后，在控制台中按下Ctrl+Break组合键，控制台就会显示当前类信息柱状图。<br>
+通过柱状图信息，可以看到当前系统中占用空间最多的对象，以及其实例数量和空间大小。</p></li>
+</ol>
+<h3 id="e7b3bbe7bb9fe58f82e695b0e69fa5e79c8b" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e7b3bbe7bb9fe58f82e695b0e69fa5e79c8b" style="color: #0088cc; text-decoration: none;"></a>系统参数查看</h3>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintVMOptions<br>
+可以在程序运行时，打印虚拟机接受到的命令行显式参数。<br>
+如下：</p><pre class="xiaoshujiang_code_container" style="word-wrap: break-word;"><code class="language-java hljs" style="border: 0; border-radius: 4px; font-size: 90%; background-color: #D6DBDF; color: #4f424c; padding-top: 0.5em; padding-right: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; display: block; overflow-x: auto; background: #e7e9db; -webkit-text-size-adjust: none;">
+VM option <span class="hljs-string" style="color: #48b685;">'+PrintVMOptions'</span>
+
+</code></pre>
+</li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintCommandLineFlags<br>
+打印传递给虚拟机的显式和隐式参数。隐式参数未必是通过命令行直接给出的，可能是由虚拟机启动时自行设置的。</p></li>
+</ol>
+<pre class="xiaoshujiang_code_container" style="word-wrap: break-word;"><code class="language-java hljs" style="border: 0; border-radius: 4px; font-size: 90%; background-color: #D6DBDF; color: #4f424c; padding-top: 0.5em; padding-right: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; display: block; overflow-x: auto; background: #e7e9db; -webkit-text-size-adjust: none;">
+-XX:InitialHeapSize=<span class="hljs-number" style="color: #f99b15;">195022720</span> -XX:MaxHeapSize=<span class="hljs-number" style="color: #f99b15;">3120363520</span> -XX:+PrintCommandLineFlags -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC
+
+</code></pre>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">本例和1中通过命令行加的参数一样，只有一个+PrintVMOptions</p>
+<ol start="3" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+PrintFlagsFinal<br>
+它会打印所有系统参数的值。开启这个参数后，虚拟机会产生高达500行的输出，每一行为一个配置参数和其当前取值。<br>
+如下(只截取部分)：</p></li>
+</ol>
+<pre class="xiaoshujiang_code_container" style="word-wrap: break-word;"><code class="language-java hljs" style="border: 0; border-radius: 4px; font-size: 90%; background-color: #D6DBDF; color: #4f424c; padding-top: 0.5em; padding-right: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; display: block; overflow-x: auto; background: #e7e9db; -webkit-text-size-adjust: none;">
+[Global flags]
+    uintx AdaptiveSizeDecrementScaleFactor          = <span class="hljs-number" style="color: #f99b15;">4</span>                                   {product}
+    uintx AdaptiveSizeMajorGCDecayTimeScale         = <span class="hljs-number" style="color: #f99b15;">10</span>                                  {product}
+    uintx AdaptiveSizePausePolicy                   = <span class="hljs-number" style="color: #f99b15;">0</span>                                   {product}
+    uintx AdaptiveSizePolicyCollectionCostMargin    = <span class="hljs-number" style="color: #f99b15;">50</span>                                  {product}
+    uintx AdaptiveSizePolicyInitializingSteps       = <span class="hljs-number" style="color: #f99b15;">20</span>                                  {product}
+    uintx AdaptiveSizePolicyOutputInterval          = <span class="hljs-number" style="color: #f99b15;">0</span>                                   {product}
+    uintx AdaptiveSizePolicyWeight                  = <span class="hljs-number" style="color: #f99b15;">10</span>                                  {product}
+    uintx AdaptiveSizeThroughPutPolicy              = <span class="hljs-number" style="color: #f99b15;">0</span>               
+
+</code></pre>
+<h3 id="e5a086e9858de7bdae" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e5a086e9858de7bdae" style="color: #0088cc; text-decoration: none;"></a>堆配置</h3>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-Xms</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-Xmx</p></li>
+</ol>
+<h4 id="e696b0e7949fe4bba3" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 20px; color: inherit; text-rendering: optimizelegibility; font-size: 17.5px;"><a name="e696b0e7949fe4bba3" style="color: #0088cc; text-decoration: none;"></a>新生代</h4>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-Xmn<br>
+设置新生代的大小。设置一个较大的新生代会减少老年代的大小，这个参数对系统性能影响很大，一般设置为整个堆空间的1/3到1/4左右</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:SurvivorRatio</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:NewRatio<br>
+设置新生代和老年代的比例，含义如下:-XXX:NewRatio=老年代/新生代</p>
+</li>
+</ol>
+<h4 id="e5a086e6baa2e587ba" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 20px; color: inherit; text-rendering: optimizelegibility; font-size: 17.5px;"><a name="e5a086e6baa2e587ba" style="color: #0088cc; text-decoration: none;"></a>堆溢出</h4>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+HeapDumpOnOutOfMemoryError<br>
+在内存溢出时导出整个堆信息，配合-XX:+HeapDumpPath</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:HeapDumpPath<br>
+指定导出堆的存放路径<br>
+如：</p></li>
+</ol>
+<pre class="xiaoshujiang_code_container" style="word-wrap: break-word;"><code class="language-java hljs" style="border: 0; border-radius: 4px; font-size: 90%; background-color: #D6DBDF; color: #4f424c; padding-top: 0.5em; padding-right: 0.5em; padding-bottom: 0.5em; padding-left: 0.5em; display: block; overflow-x: auto; background: #e7e9db; -webkit-text-size-adjust: none;">
+-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/tmp/stack.log
+
+</code></pre>
+<h3 id="e696b9e6b395e58cba" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e696b9e6b395e58cba" style="color: #0088cc; text-decoration: none;"></a>方法区</h3>
+<h4 id="jdk1617" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 20px; color: inherit; text-rendering: optimizelegibility; font-size: 17.5px;"><a name="jdk1617" style="color: #0088cc; text-decoration: none;"></a>jdk1.6/1.7</h4>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:PermSize</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:MaxPermSize</p></li>
+</ol>
+<h4 id="jdk18" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 20px; color: inherit; text-rendering: optimizelegibility; font-size: 17.5px;"><a name="jdk18" style="color: #0088cc; text-decoration: none;"></a>jdk1.8</h4>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:MaxMetaspaceSize<br>
+默认只受系统内存的限制，但也可以通过参数来进行设置</p>
+<h3 id="e79bb4e68ea5e58685e5ad98e9858de7bdae" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e79bb4e68ea5e58685e5ad98e9858de7bdae" style="color: #0088cc; text-decoration: none;"></a>直接内存配置</h3>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:MaxDirectMemorySize<br>
+如不设置，默认系统最大堆内存，即-Xmx</p>
+<h3 id="e59e83e59cbee694b6e99b86e599a8" style="margin-top: 0.5em; margin-top: 1.0em; margin-right: 0; margin-right: 0; margin-bottom: 0.5em; margin-bottom: .6em; margin-left: 0; margin-left: 0; font-family: inherit; font-weight: 500; line-height: 1.1; color: inherit; text-rendering: optimizelegibility; font-size: 24.5px;"><a name="e59e83e59cbee694b6e99b86e599a8" style="color: #0088cc; text-decoration: none;"></a>垃圾收集器</h3>
+<ol style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 35px;">
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseSerialGC<br>
+新生代、老年代都使用串行回收器</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseParNewGC<br>
+新生代使用ParNew回收器，老年代使用串行回收器。</p>
+<ul style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+ParallelGCThreads<br>
+指定ParNew工作时的线程数量，一般与CPU数量相当，感觉默认值就挺好。</p></li>
+</ul>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseParallelGC<br>
+新生代使用Parallel回收器，老年代使用串行收集器</p>
+<ul style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 35px;">
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+MaxGCPauseMillis<br>
+设置最大垃圾收集停顿时间。它的值是一个大于0的整数，ParallelGC在工作时，会调整JAVA堆大小或者其它参数，尽可能地把停顿时间控制在MaxGCPauseMillis以内。</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+GCTimeRatio<br>
+设置吞量大小。它是值是一个介于0-100之间的整数。假设GCTimeRatio的值为n,则系统会花费不超过1/(1+n)的时间比例用于垃圾回收。</p></li>
+<li><p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseAdaptiveSizePolicy<br>
+打开自适应GC策略。在这种模式下，新生代的大小、eden与survivor的比例、晋升老年代的对象年龄等参数会自动调整，以达到在堆大小、吞吐量和停顿时间之间的平衡点。在手工调优比较困难的场合下，可以直接使用这种模式，仅指定虚拟机的最大堆、目标吞吐量和停顿时间。</p></li>
+</ul>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseConcMarkSweepGC<br>
+新生代使用ParNew收集器，老年代使用CMS</p>
+</li>
+<li>
+<p style="margin-top: 0; margin-right: 0; margin-bottom: 1.1em; margin-left: 0; line-height: 1.6;">-XX:+UseParallelOldGC<br>
+新生代使用ParallelGC回收器，老年代使用ParallelOldGC回收器。也可以用-XX:+ParallelGCThreads设置工作时的线程数量。</p>
+</li>
+</ol>
+</div>
+</body>
+</div></div>
+</body></html>
+
