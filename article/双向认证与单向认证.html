@@ -1,0 +1,816 @@
+<!DOCTYPE html><html lang="en"><head>
+<title> 双向认证与单向认证---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="()">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<style type="text/css">
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: normal;
+}
+
+
+h1.story_title {
+	margin: 0.7em 0;
+}
+.story_tags {
+	margin: 0 0 1.2em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+	margin: 1.0em 0 .6em 0;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 40px;
+}
+
+h1 {
+  font-size: 38.5px;
+}
+
+h2 {
+  font-size: 31.5px;
+}
+
+h3 {
+  font-size: 24.5px;
+}
+
+h4 {
+  font-size: 17.5px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 11.9px;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0 0 10px 35px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+
+dl {
+  margin-bottom: 20px;
+}
+
+dt,
+dd {
+  line-height: 20px;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999;
+}
+
+
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #dddddd;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+	border: 1px solid rgba(34,36,38,.15);
+}
+.tag.label{
+display: inline-block;
+vertical-align: baseline;
+line-height: 1;
+margin: 0em 0.125em;
+background-color: #e8e8e8;
+border-color: #e8e8e8;
+background-image: none;
+padding: 0.6em 0.8em;
+color: rgba(0, 0, 0, 0.6);
+text-transform: none;
+font-weight: bold;
+border-radius: 0.2857rem;
+box-sizing: border-box;
+font-size: 0.7428rem;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table thead th {
+  vertical-align: bottom;
+}
+
+.table caption + thead tr:first-child th,
+.table caption + thead tr:first-child td,
+.table colgroup + thead tr:first-child th,
+.table colgroup + thead tr:first-child td,
+.table thead:first-child tr:first-child th,
+.table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+
+.table .table {
+  background-color: #ffffff;
+}
+
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+.table-celled.table tr td,.table-celled.table tr th {
+    border-left: 1px solid rgba(34,36,38,.1)
+}
+
+.table-celled.table tr td:first-child,.table-celled.table tr th:first-child {
+    border-left: none
+}
+
+.toc ul {
+	list-style: none;
+}
+p {
+	line-height: 1.6;
+}
+body>p {
+  margin-bottom: 1.8em;
+}
+body>p>img.center,
+body>p>a>img.center {
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(128,128,128,0.3);
+}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, 'Hiragino Sans GB', STHeiti, "Microsoft YaHei", "微软雅黑", 'WenQuanYi Micro Hei', STXihei, "华文细黑", Heiti, "黑体", SimSun, "宋体", Song, sans-serif;
+  font-size: 1.15em;
+  font-weight: 100;
+//  line-height: 1.8em;
+  color: #2f2f2f;
+}
+em.cjk_emphasis{
+	font-style: normal;
+	font-family: Georgia,"Times New Roman",Times,"楷体","AR PL UKai CN", "NSimSun","Songti SC","SimSun",serif!important;
+}
+body dt,
+body dd {
+  line-height: 1.35em;
+}
+body code, body .xiaoshujiang_code {
+//	background-color: #D6DBDF;
+	border: 0;
+  border-radius: 4px;
+//  color: #2C3E50;
+  font-size: 90%;
+//  padding: 2px 4px;
+}
+code {
+	background-color: #D6DBDF;
+	border-radius: 4px;
+	color: #2C3E50;
+	padding: 2px 4px;
+}
+.xiaoshujiang_code ol{
+	margin-bottom: 0px;
+}
+body h1 {
+  line-height: 1.6;
+}
+body h2 {
+  line-hieght: 1.1;
+}
+body h3 {
+  line-height: 1.1;
+}
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ * Copyright (c) 2014-2015, Asciidocfx Team, (MIT Licensed)
+ * https://github.com/asciidocfx/highlight-treeview.js
+ */
+.language-treeview.hljs{
+  position: relative;
+}
+.hljs-folder,
+.hljs-hiddenfile,
+.hljs-file {
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    height: 16px;
+}
+.hljs-folder:before,
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    top: 0;
+    content: '';
+    width: 14px;
+    height: 12px;
+    margin-top: 0px;
+    margin-right: 3px;
+    position: relative;
+    display: inline-block;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+.hljs-file:before,
+.hljs-hiddenfile:before {
+    height: 14px;
+    margin-left: 1px;
+}
+.hljs-hiddenfile {
+    opacity: 0.6;
+}
+.hljs-file.photo:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c5";
+}
+.hljs-file.plain:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-file.source:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c9";
+}
+.hljs-file.archive:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c6";
+}
+.hljs-file.audio:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c7";
+}
+.hljs-file.video:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c8";
+}
+.hljs-file.pdf:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c1";
+}
+.hljs-file.xls:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c3";
+}
+.hljs-file.doc:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c2";
+}
+.hljs-file.ppt:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f1c4";
+}
+.hljs-folder:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f114";
+}
+.hljs-hiddenfile:before {
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f016";
+}
+.hljs-tvline {
+    margin-left: 6px;
+    position: absolute;
+    text-indent: -99em;
+    padding-bottom: 8px;
+    vertical-align: top;
+    display: inline-block;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch {
+    width: 8px;
+    height: 8px;
+    margin-top: -1px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+}
+.hljs-folder-branch.win {
+    width: 14px;
+    margin-right: 2px;
+}
+.hljs-folder-last-branch {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    text-indent: -99em;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(94, 144, 117);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgb(94, 144, 117);
+}
+.hljs-folder-last-branch.win {
+    width: 13px;
+    margin-right: 2px;
+}
+
+
+/**
+ * Treeview syntax highlighting based on highlight.js
+ */
+
+
+.mark{
+	border: 0;
+  background-color: #ddf3e7;
+  border-radius: 4px;
+  color: #29754d;
+  font-size: 90%;
+  padding: 2px 4px;
+}
+.line_mark{
+	border: 1px dashed #3A4C42;
+}
+code .mark, .xiaoshujiang_code .mark{
+	border-radius: 0px;
+	font-size: initial;
+	padding: initial;
+}
+a.attachment{
+	background-color: #ecf0f3;
+	border: 1px solid #bec6cb;
+	display: inline-block;
+	padding: 5px;
+	margin: 2px;
+	min-width: 250px;
+}
+a.attachment i.fa{
+	font-size: 3em;
+  float: left;
+  margin-right: 0.2em;
+}
+a.attachment .filename{
+	vertical-align: top;
+  text-align: left;
+  font-weight: bold;
+}
+a.attachment .filesize{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  opacity: .6;
+  font-size: 80%;
+  white-space: nowrap;
+}
+.checkbox .checked{
+	text-decoration: line-through;
+}
+.flow-chart, .sequence-diagram{
+	text-align: center;
+}
+.plot, .plot-image{
+	text-align: center;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+pre, .xiaoshujiang_pre {
+	line-height: initial !important;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+
+.xiaoshujiang_pre {
+	margin: 1em 0px;
+	font-family: monospace;
+	white-space: pre;
+}
+
+.story_align_left, .story_align_left .story_image_container {
+	text-align: left;
+}
+.story_align_right, .story_align_right .story_image_container {
+	text-align: right;
+}
+.story_align_center, .story_align_center .story_image_container {
+	text-align: center;
+}
+.story_align_justify, .story_align_justify .story_image_container {
+	text-align: justify;
+}
+
+
+/** 
+ * code line nums
+ */
+code.hljs.code_linenums, .xiaoshujiang_code.hljs.code_linenums{
+	position: relative;
+}
+.ol_linenums{
+	padding: 0px;
+	margin-left: 30px;
+	border-left: 1px solid #e0e0e0;
+}
+.li_linenum{
+	line-height: 20px;
+	margin-left: 10px;
+	list-style: none;
+	counter-increment: lines 1;
+}
+.li_linenum.li_list_style{
+	list-style: inherit;
+	margin-left: 5px;
+}
+.li_linenum:before, .li_linenum_before_span{
+	content: counter(lines, decimal);
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  width: 2.5em;
+	opacity: 0.5;
+  vertical-align: top;
+}
+.li_linenum_before_span_hide{
+	display: none;
+}
+.xiaoshujiang_code .code_line_break_hack{
+	margin:0;
+	border:0;
+	border-top:0;
+	border-bottom:0;
+}
+/** 
+ * code line nums
+ */
+.mathjax-container{
+	text-align: center;
+}
+div.mathjax{
+	max-width: 700px;
+	margin: 0 auto;
+	font-size: 14px;
+}
+text{
+	font-size: 14px;
+}
+
+/**
+ * block image
+ */
+
+.story_image_container{
+	text-align: center;
+}
+.story_image_container>.story_image{
+	display: inline-block;
+  position: relative;
+	max-width: 80%;
+}
+.story_image_caption{
+	border-bottom: 1px solid #d9d9d9;
+	display: inline-block;
+	color: #999;
+	padding: 10px;
+}
+.story_image_blank_caption{
+	border-bottom: 0px;
+}
+/**
+.story_image:before, .story_image:after{
+	content: '';
+	position: absolute;
+	z-index: -2;
+	bottom: 13px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	border-radius: 10px/90px;
+	box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+.story_image:after {
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+**/
+.story_image>img{
+	border-radius: 0.3125em;
+	box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);
+}
+.story_inline_image>img{
+	max-width: 50%;
+	vertical-align: bottom;
+}
+
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: white;
+  color: black;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.diff .hljs-header,
+.hljs-chunk,
+.apache .hljs-cbracket {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-built_in,.css
+.smalltalk .hljs-class,
+.hljs-winutils,
+.bash .hljs-variable,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title,
+.xml .hljs-tag,
+.xml .hljs-tag .hljs-value {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rule .hljs-value,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-template_tag,
+.django .hljs-variable,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.apache .hljs-tag,
+.hljs-date,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute,
+.hljs-name {
+  color: #a31515;
+}
+
+.ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.hljs-preprocessor,
+.hljs-pragma,
+.userType,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #2b91af;
+}
+
+.hljs-phpdoc,
+.hljs-dartdoc,
+.hljs-javadoc,
+.hljs-xmlDocTag {
+  color: #808080;
+}
+
+.hljs-type,
+.hljs-typename { font-weight: bold; }
+
+.vhdl .hljs-string { color: #666666; }
+.vhdl .hljs-literal { color: #a31515; }
+.vhdl .hljs-attribute { color: #00b0e8; }
+
+.xml .hljs-attribute { color: #f00; }
+
+
+
+</style>
+</head><body>
+<div><div class="preview" id="wmd-preview">
+
+	<div class="preview"><h1 class="story_title">双向认证与单向认证</h1><div class="story_tags"><div class="tag blue label">SSL</div><div class="tag blue label"> 单向认证</div><div class="tag blue label"> 双向认证</div></div><h3 id="e59fbae69cace6a682e5bfb5"><a name="e59fbae69cace6a682e5bfb5"></a>基本概念</h3>
+<ul>
+<li>
+<p>SSL / TLS<br>
+SSL ( Secure Sockets Layer ) , 安全套接层。其继任者 TLS ( Transport Layer Security ) 传输安全层 , 是为网络通信提供安全及数据完整性的一种安全协议。TLS与SSL在<strong>传输层</strong>对网络进行加密。</p>
+</li>
+<li>
+<p>HTTPS<br>
+HTTPS ( Hypertext Transfer Protocol Secure ) 安全超文本传输协议。<br>
+HTTPS是以安全为目录的HTTP通道，简单讲是HTTP的安全版。即HTTP下加入SSL层。<br>
+http协议直接放置在TCP协议之上，而https提出在http和TCP中间加上一层加密层。从发送端看，这一层负责把http的内容加密后送到下层 的TCP，从接收方看，这一层负责将TCP送来的数据解密还原成http的内容。<br>
+所以https的协议栈应该如下图所示：</p>
+<p></p><div class="story_image_container story_block_image"><div class="story_image"><img src="data:image/png;base64,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" alt="https 协议栈" name="391013cd3d343b733f3b3a3fa2c14a10.png"></div><br><div class="story_image_caption ">https 协议栈</div></div><p></p>
+</li>
+<li>
+<p>数字证书</p>
+<p>一种文件的名称，好比一个机构或人的签名，能够证明这个机构或人的真实性。其中包含的信息，用于实现上述功能。</p>
+</li>
+<li>
+<p>加密和认证</p>
+<p>加密是指通信双方为了防止铭感信息在信道上被第三方窃听而泄漏，将明文通过加密变成密文，如果第三方无法解密的话，就算他获得密文也无能为力；认证是指通信双方为了确认对方是值得信任的消息发送或接受方，而不是使用假身份的非法者，采取的确认身份的方式。只有同时进行了加密和认证才能保证通信的安全，因此在SSL通信协议中这两者都被应。早期一般是用对称加密算法，现在一般都是不对称加密，最常见的算法就是RSA。</p>
+</li>
+<li>
+<p>消息摘要</p>
+<p>这个技术主要是为了避免消息被篡改。消息摘要是把一段信息，通过某种算法，得出一串字符串。这个字符串就是消息的摘要。如果消息被篡改（发生了变化），那么摘要也一定会发生变化（如果2个不同的消息生成的摘要是一样的，那么这就叫发生了碰撞）。</p>
+<p>消息摘要的算法主要有MD5和SHA，在证书领域，一般都是用SHA（安全哈希算法）。</p>
+</li>
+<li>
+<p>单向认证<br>
+客户端使用SSL时对服务端的证书进行认证，也就是说，客户端在请求建立之前，服务器会向客户端发送一个证书，一般情况下，这种证书都是由企业自行发布的，所以在客户端使用HTTPS时，会跳出"是否信息并继续"，点击信任则表示客户端信息服务器端证书，才可以继续交互。</p>
+</li>
+<li>
+<p>双向认证</p>
+<p>客户端和服务器端都对双方的证书进行验证，这时除了单向认证外，还需要在服务器端的受信任证书列表中加入客户端的证书，这样服务器才能信任客户端的请求。</p>
+</li>
+</ul>
+<h3 id="e8aea4e8af81e8bf87e7a88b"><a name="e8aea4e8af81e8bf87e7a88b"></a>认证过程</h3>
+<p>① 浏览器发送一个连接请求给安全服务器。</p>
+<p>② 服务器将自己的证书，以及同证书相关的信息发送给客户浏览器。</p>
+<p>③ 客户浏览器检查服务器送过来的证书是否是由自己信赖的 CA 中心所签发的。如果是，就继续执行协议；如果不是，客户浏览器就给客户一个警告消息：警告客户这个证书不是可以信赖的，询问客户是否需要继续。</p>
+<p>④ 接着客户浏览器比较证书里的消息，例如域名和公钥，与服务器刚刚发送的相关消息是否一致，如果是一致的，客户浏览器认可这个服务器的合法身份。</p>
+<p>⑤ 服务器要求客户发送客户自己的证书。收到后，服务器验证客户的证书，如果没有通过验证，拒绝连接；如果通过验证，服务器获得用户的公钥。</p>
+<p>⑥ 客户浏览器告诉服务器自己所能够支持的通讯对称密码方案。</p>
+<p>⑦ 服务器从客户发送过来的密码方案中，选择一种加密程度最高的密码方案，用客户的公钥加过密后通知浏览器。</p>
+<p>⑧ 浏览器针对这个密码方案，选择一个通话密钥，接着用服务器的公钥加过密后发送给服务器。</p>
+<p>⑨ 服务器接收到浏览器送过来的消息，用自己的私钥解密，获得通话密钥。</p>
+<p>⑩ 服务器、浏览器接下来的通讯都是用对称密码方案，对称密钥是加过密的。</p>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">上面所述的是双向认证 SSL 协议的具体通讯过程，这种情况要求服务器和用户双方都有证书。单向认证 SSL 协议不需要客户拥有 CA 证书，具体的过程相对于上面的步骤，只需将服务器端验证客户证书的过程去掉，以及在协商对称密码方案，对称通话密钥时，服务器发送给客户的是没有加过密的 （这并不影响 SSL 过程的安全性）密码方案。这样，双方具体的通讯内容，就是加过密的数据，如果有第三方攻击，获得的只是加密的数据，第三方要获得有用的信息，就需要对加密 的数据进行解密，这时候的安全就依赖于密码方案的安全。而幸运的是，目前所用的密码方案，只要通讯密钥长度足够的长，就足够的安全。这也是我们强调要求使用128 位加密通讯的原因。
+</code></pre>
+<h3 id="e58f82e88083e69687e7aba0"><a name="e58f82e88083e69687e7aba0"></a>参考文章</h3>
+<ol>
+<li><p><a href="http://baike.baidu.com/link?url=-GRXPyqMEaF7HJ-oHn909yHjJqe-RlwHM5yTz4D6s8qFXbMRoWRSNZEW0NA4Py3tMig7lIDksvW7Ry0pLu4eL_">百度百科</a></p></li>
+<li><p><a href="http://my.oschina.net/nearzk/blog/485652">HTTPS单向认证和双向认证</a></p></li>
+<li><p><a href="http://www.cnblogs.com/muffe/p/3513610.html">https单向认证和双向认证</a></p></li>
+</ol>
+</div>
+
+</div></div>
+</body></html>
+
