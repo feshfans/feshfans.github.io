@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en"><head>
-<title> 时间戳---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
+<title> Samba安装笔记---小书匠,在线编辑器,MARKDOWN,Evernote,文件版本</title>
   <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -754,22 +754,67 @@ Visual Studio-like style based on original C# coloring by Jason Diamond <jason@d
 </head><body>
 <div><div class="preview" id="wmd-preview">
 
-	<div class="preview"><h1 class="story_title">时间戳</h1><div class="story_tags"><div class="tag blue label">NTP</div><div class="tag blue label">UNIX</div><div class="tag blue label">时间戳</div></div><p>不同的时间戳只不过是相对的时间点不同</p>
+	<div class="preview"><h1 class="story_title">Samba安装笔记</h1><div class="story_tags"><div class="tag blue label">linux </div><div class="tag blue label"> samba</div></div><h3 id="e8838ce699af"><a name="e8838ce699af"></a>背景</h3>
+<p>公司要在完全无网络的环境下使用Maven，为了尽快将本地仓库丰富起来，所以决定将本地maven库共享。众人拾柴火焰高嘛。<br>
+这就需要Samba来支持了！</p>
+<h3 id="e5ae89e8a385"><a name="e5ae89e8a385"></a>安装</h3>
+<ol>
+<li><p>将Centos-*-.iso 镜像挂载到系统中，制成本地 yum 源。或有其它可用的 yum 源也可。</p></li>
+<li><p>执行 yum install samba*  这样省心但会安装一些无用的东西，如客户端，但本人实在太懒。</p></li>
+<li><p>执行命令rpm -qa | grep samba进行查询，发现搭建samba服务器所依赖的所有服务器都已经安装好了即可</p></li>
+</ol>
+<h3 id="e9858de7bdae"><a name="e9858de7bdae"></a>配置</h3>
+<p>Samba的配置文件一般就放在/etc/samba目录中，主配置文件名为smb.conf，，文件中记录着大量的规则和共享信息。</p>
 <ol>
 <li>
-<p>NTP<br>
-NTP时间戳是距1900年1月1日0点0分0秒的秒数</p>
+<p>备份smb.conf</p>
+<p>mv smb.conf smb.conf.bak</p>
 </li>
 <li>
-<p>Unix<br>
-Unix 时间戳是距1970年1月1日0点0分0秒的秒数</p>
+<p>新建smb.conf</p>
+<p>touch smb.conf</p>
+</li>
+<li>
+<p>写入以下配置：</p>
 </li>
 </ol>
-<blockquote>
-<p>如果我们想知道1970年的NTP时间戳，实际上是1970年和1900年之间的秒数。而这个数字也等于 abs(1900年的Unix时间戳)<br>
-可以使用<a href="http://tool.lu/timestamp">在线转换工具</a>算出这个值，取正之后，就是1970年的NTP时间戳。</p>
-</blockquote>
-<p></p><div class="story_image_container story_block_image"><div class="story_image"><img src="data:image/png;base64,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" name="images/timestamp.PNG" alt="时间戳转换工具" title="时间戳转换工具"></div><br><div class="story_image_caption ">时间戳转换工具</div></div><p></p>
+<pre class="xiaoshujiang_code_container"><code class="language-bash hljs">    [global]
+
+        workgroup = WORKGROUP
+        netbios name = maven-repo
+        server string = share maven repo
+        security = user
+        map to guest = Bad User
+
+     [maven-repo]
+            path = /opt/maven-repo
+            writeable = yes
+            browseable = yes 
+            guest ok = yes
+            public = yes
+          
+</code></pre>
+<hr>
+<p>每个选项的意思可百度或查看smb.conf.bak文件，里面有详细的说明。</p>
+<ol start="4">
+<li><p>赋权<br>
+将/op/maven-repo文件夹及子目录赋予写权限<br>
+chmod -R 777 /opt/maven-repo</p></li>
+</ol>
+<h3 id="e590afe58aa8"><a name="e590afe58aa8"></a>启动</h3>
+<pre class="xiaoshujiang_code_container"><code class="nohighlight hljs">        [root@localhost ~]# smbd
+</code></pre>
+<hr>
+<p>在windows中输入 \\ip  ,即可验证是否正确</p>
+<h3 id="e98187e588b0e79a84e997aee9a298"><a name="e98187e588b0e79a84e997aee9a298"></a>遇到的问题</h3>
+<ol>
+<li><p>无法写入</p></li>
+</ol>
+<p>将共享的文件夹赋予写入权限即可解决</p>
+<ol start="2">
+<li><p>要求输入用户名/密码</p></li>
+</ol>
+<p>一开始，按照网上的教程将security=share 导致，在4.*的版本中 share 已不再使用。将配置改成上述的配置后重启(smbd restart) 即可解决</p>
 </div>
 
 </div></div>
